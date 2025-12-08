@@ -92,7 +92,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <div className="mr-auto flex items-center md:mr-4">
-          <Link href="#acasa" className="mr-6 hidden items-center space-x-2 md:flex" onClick={(e) => handleNavClick(e, "#acasa")}>
+          <Link href="#acasa" className="mr-6 flex items-center space-x-2" onClick={(e) => handleNavClick(e, "#acasa")}>
             <Logo />
           </Link>
           <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
@@ -101,32 +101,34 @@ export function Header() {
             ))}
           </nav>
         </div>
-        <div className="flex items-center justify-end">
-          <Sheet open={isMobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Deschide meniul</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left" className="pr-0">
-              <SheetHeader>
-                <SheetTitle className="sr-only">Meniu Navigare</SheetTitle>
-              </SheetHeader>
-              <Link
-                href="#acasa"
-                className="mb-8 flex items-center"
-                onClick={(e) => handleNavClick(e, "#acasa")}
-              >
-                <Logo />
-              </Link>
-              <div className="flex flex-col space-y-4">
-                {navLinks.map((link) => (
-                  <MobileNavLink key={link.href} href={link.href} label={link.label} />
-                ))}
-              </div>
-            </SheetContent>
-          </Sheet>
+        <div className="flex items-center justify-end md:w-auto">
+          <div className="md:hidden">
+            <Sheet open={isMobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Deschide meniul</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left" className="pr-0">
+                <SheetHeader>
+                  <SheetTitle className="sr-only">Meniu Navigare</SheetTitle>
+                </SheetHeader>
+                <Link
+                  href="#acasa"
+                  className="mb-8 flex items-center"
+                  onClick={(e) => handleNavClick(e, "#acasa")}
+                >
+                  <Logo />
+                </Link>
+                <div className="flex flex-col space-y-4">
+                  {navLinks.map((link) => (
+                    <MobileNavLink key={link.href} href={link.href} label={link.label} />
+                  ))}
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
           <Button asChild className="hidden md:flex">
              <Link href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>Devino Membru</Link>
           </Button>
