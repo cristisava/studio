@@ -16,7 +16,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
-import { useRef } from "react";
+import React from "react";
 
 
 const heroImage = PlaceHolderImages.find(img => img.id === 'hero-background');
@@ -77,11 +77,11 @@ export default function Home() {
         targetElement.scrollIntoView({ behavior: 'smooth' });
     }
   };
-  const galleryPlugin = useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+  const galleryPlugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: false })
   );
-  const teamPlugin = useRef(
-    Autoplay({ delay: 2500, stopOnInteraction: true })
+  const teamPlugin = React.useRef(
+    Autoplay({ delay: 2500, stopOnInteraction: false })
   );
 
   return (
@@ -235,10 +235,14 @@ export default function Home() {
            {/* Carousel for mobile */}
           <div className="sm:hidden my-16">
             <Carousel 
-              className="w-full max-w-xs mx-auto"
+              opts={{
+                align: "start",
+                loop: true,
+              }}
               plugins={[galleryPlugin.current]}
+              className="w-full max-w-xs mx-auto"
               onMouseEnter={galleryPlugin.current.stop}
-              onMouseLeave={galleryPlugin.current.reset}
+              onMouseLeave={galleryPlugin.current.play}
             >
               <CarouselContent>
                 {galleryImages.map((image) => (
@@ -304,11 +308,15 @@ export default function Home() {
           </div>
           {/* Carousel for mobile */}
           <div className="sm:hidden my-16">
-            <Carousel 
-              className="w-full max-w-xs mx-auto"
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
               plugins={[teamPlugin.current]}
+              className="w-full max-w-xs mx-auto"
               onMouseEnter={teamPlugin.current.stop}
-              onMouseLeave={teamPlugin.current.reset}
+              onMouseLeave={teamPlugin.current.play}
             >
               <CarouselContent>
                 {teamMembers.map((member) => {
