@@ -317,13 +317,6 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                 <Card className="mt-8">
-                    <CardContent className="p-2">
-                        <div className="aspect-video bg-muted rounded-md flex items-center justify-center text-sm text-muted-foreground">
-                            Placeholder pentru hartă interactivă
-                        </div>
-                    </CardContent>
-                 </Card>
             </div>
           </div>
         </div>
