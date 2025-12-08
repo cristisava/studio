@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 import React, { useState, useEffect } from "react";
 
@@ -91,17 +90,18 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <div className="mr-auto flex items-center md:mr-4">
-          <Link href="#acasa" className="mr-6 flex items-center space-x-2" onClick={(e) => handleNavClick(e, "#acasa")}>
-            <Logo />
-          </Link>
-          <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
-            {navLinks.map((link) => (
-              <NavLink key={link.href} href={link.href} label={link.label} />
-            ))}
-          </nav>
-        </div>
-        <div className="flex items-center justify-end md:w-auto">
+        <Link href="#acasa" className="mr-6 flex items-center space-x-2" onClick={(e) => handleNavClick(e, "#acasa")}>
+          <Logo />
+        </Link>
+        <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
+          {navLinks.map((link) => (
+            <NavLink key={link.href} href={link.href} label={link.label} />
+          ))}
+        </nav>
+        <div className="flex flex-1 items-center justify-end space-x-4">
+          <Button asChild className="hidden md:flex">
+             <Link href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>Devino Membru</Link>
+          </Button>
           <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
@@ -129,9 +129,6 @@ export function Header() {
               </SheetContent>
             </Sheet>
           </div>
-          <Button asChild className="hidden md:flex">
-             <Link href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>Devino Membru</Link>
-          </Button>
         </div>
       </div>
     </header>
