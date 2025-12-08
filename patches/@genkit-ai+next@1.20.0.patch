@@ -1,0 +1,35 @@
+diff --git a/node_modules/@genkit-ai/next/package.json b/node_modules/@genkit-ai/next/package.json
+index 35a8286..0d829dc 100644
+--- a/node_modules/@genkit-ai/next/package.json
++++ b/node_modules/@genkit-ai/next/package.json
+@@ -29,7 +29,6 @@
+   "peerDependencies": {
+     "genkit": "1.20.0",
+     "next": "^15.0.0",
+-    "react": "^19.0.0",
+     "zod": "^3.23.0"
+   },
+   "dependencies": {
+diff --git a/node_modules/@genkit-ai/next/run-flow.js b/node_modules/@genkit-ai/next/run-flow.js
+index 7247854..314a51e 100644
+--- a/node_modules/@genkit-ai/next/run-flow.js
++++ b/node_modules/@genkit-ai/next/run-flow.js
+@@ -20,7 +20,7 @@
+ Object.defineProperty(exports, "__esModule", { value: true });
+ exports.runFlow = void 0;
+ const genkit_1 = require("genkit");
+-const stream_1 = require("next/dist/compiled/@edge-runtime/primitives/stream");
++// const { ReadableStream } = require('node:stream/web');
+ /**
+  * An action to run a flow.
+  */
+@@ -62,7 +62,7 @@
+         try {
+             const flow = await (0, genkit_1.getFlow)(flowId);
+             if (flow) {
+-                const stream = new stream_1.ReadableStream({
++                const stream = new ReadableStream({
+                     async start(controller) {
+                         try {
+                             const flowResult = await (0, genkit_1.runFlow)(flow, input, {
+
