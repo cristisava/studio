@@ -7,7 +7,7 @@ import React, { useState, useEffect } from "react";
 
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -90,7 +90,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-20 items-center">
+      <div className="container flex h-16 items-center">
         <div className="mr-4 flex">
           <Link href="#acasa" className="mr-6 flex items-center space-x-2" onClick={(e) => handleNavClick(e, "#acasa")}>
             <Logo />
@@ -110,6 +110,9 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="pr-0">
+              <SheetHeader>
+                <SheetTitle className="sr-only">Meniu Navigare</SheetTitle>
+              </SheetHeader>
               <Link
                 href="#acasa"
                 className="mb-8 flex items-center"
