@@ -8,6 +8,16 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ArrowRight, BrainCircuit, Dumbbell, Mail, MapPin, Phone, ShieldCheck, Target, Trophy, Users } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ContactForm } from "@/components/contact-form";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
+import { useRef } from "react";
+
 
 const heroImage = PlaceHolderImages.find(img => img.id === 'hero-background');
 const aboutImage = PlaceHolderImages.find(img => img.id === 'about-us-1');
@@ -67,6 +77,9 @@ export default function Home() {
         targetElement.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  const plugin = useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
 
   return (
     <div className="flex flex-col">
@@ -198,7 +211,8 @@ export default function Home() {
               Momente surprinse din antrenamente, meciuri și evenimente speciale.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-16">
+          {/* Grid for desktop */}
+          <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-16">
             {galleryImages.map((image) => (
               <Card key={image.id} className="overflow-hidden group shadow-md hover:shadow-xl transition-shadow duration-300">
                 <CardContent className="p-0">
@@ -214,6 +228,37 @@ export default function Home() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+           {/* Carousel for mobile */}
+          <div className="sm:hidden my-16">
+            <Carousel 
+              className="w-full max-w-xs mx-auto"
+              plugins={[plugin.current]}
+              onMouseEnter={plugin.current.stop}
+              onMouseLeave={plugin.current.reset}
+            >
+              <CarouselContent>
+                {galleryImages.map((image) => (
+                  <CarouselItem key={image.id}>
+                    <Card className="overflow-hidden group shadow-md">
+                      <CardContent className="p-0">
+                        <div className="relative aspect-[4/3] w-full">
+                          <Image
+                            src={image.imageUrl}
+                            alt={image.description || 'Gallery image'}
+                            data-ai-hint={image.imageHint}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
       </section>
