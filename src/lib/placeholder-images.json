@@ -1,3 +1,90 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Background image for the hero section showing a football field at sunset.",
+      "imageUrl": "https://images.unsplash.com/photo-1709431511180-f941cbd6db7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmb290YmFsbCUyMGZpZWxkfGVufDB8fHx8MTc2NTEzNDAwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "football field"
+    },
+    {
+      "id": "about-us-1",
+      "description": "Image for the about us page showing young players in a huddle with their coach.",
+      "imageUrl": "https://images.unsplash.com/photo-1597630907602-356d09900200?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx5b3V0aCUyMGZvb3RiYWxsfGVufDB8fHx8MTc2NTIwNjEwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "youth football"
+    },
+    {
+      "id": "gallery-1",
+      "imageUrl": "https://images.unsplash.com/photo-1621998014874-a6edfb5f9bc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmb290YmFsbCUyMGdhbWV8ZW58MHx8fHwxNzY1MTUyMzUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "football game"
+    },
+    {
+      "id": "gallery-2",
+      "imageUrl": "https://images.unsplash.com/photo-1761225092045-698d1c4a9f43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzb2NjZXIlMjBhY3Rpb258ZW58MHx8fHwxNzY1MTc1Mzc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "soccer action"
+    },
+    {
+      "id": "gallery-3",
+      "imageUrl": "https://images.unsplash.com/photo-1765046894839-29753508f446?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0ZWFtJTIwY2VsZWJyYXRpb258ZW58MHx8fHwxNzY1MTEwMjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "team celebration"
+    },
+    {
+      "id": "gallery-4",
+      "imageUrl": "https://images.unsplash.com/photo-1611957082126-061f655ef1fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx5b3V0aCUyMHBsYXllcnN8ZW58MHx8fHwxNzY1MjA2MTA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "youth players"
+    },
+    {
+      "id": "gallery-5",
+      "imageUrl": "https://images.unsplash.com/photo-1598644391960-f0c4b740a0e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxnb2FsJTIwa2VlcGVyfGVufDB8fHx8MTc2NTIwNjEwOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "goal keeper"
+    },
+    {
+      "id": "gallery-6",
+      "imageUrl": "https://images.unsplash.com/photo-1589387067088-2691e8075b38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb290YmFsbCUyMHByYWN0aWNlfGVufDB8fHx8MTc2NTIwNjEwOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "football practice"
+    },
+    {
+      "id": "team-member-1",
+      "imageUrl": "https://images.unsplash.com/photo-1656338997878-279d71d48f6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY1MTY3NTk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "team-member-2",
+      "imageUrl": "https://images.unsplash.com/photo-1509868918748-a554ad25f858?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZmVtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY1MTg2MzYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "female portrait"
+    },
+    {
+      "id": "team-member-3",
+      "imageUrl": "https://images.unsplash.com/photo-1623184663110-89ba5b565eb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYW4lMjBzbWlsaW5nfGVufDB8fHx8MTc2NTE1ODczN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man smiling"
+    },
+    {
+      "id": "team-member-4",
+      "imageUrl": "https://images.unsplash.com/photo-1563178406-4cdc2923acbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d29tYW4lMjBzbWlsaW5nfGVufDB8fHx8MTc2NTE1Mzg5NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman smiling"
+    },
+    {
+      "id": "partner-1",
+      "description": "Partner logo 1",
+      "imageUrl": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb21wYW55JTIwbG9nb3xlbnwwfHx8fDE3NjUxMTk5Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "company logo"
+    },
+    {
+      "id": "partner-2",
+      "description": "Partner logo 2",
+      "imageUrl": "https://images.unsplash.com/photo-1619551734325-81aaf323686c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxicmFuZCUyMGxvZ298ZW58MHx8fHwxNzY1MTUxMTA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "brand logo"
+    },
+    {
+      "id": "partner-3",
+      "description": "Partner logo 3",
+      "imageUrl": "https://images.unsplash.com/photo-1752252254255-777df4b4e155?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzcG9uc29yJTIwbG9nb3xlbnwwfHx8fDE3NjUyMDYxMDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sponsor logo"
+    },
+    {
+      "id": "partner-4",
+      "description": "Partner logo 4",
+      "imageUrl": "https://images.unsplash.com/photo-1647006872171-0d8a19ba96da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxvcmdhbml6YXRpb24lMjBsb2dvfGVufDB8fHx8MTc2NTIwMDg3M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "organization logo"
+    }
+  ]
 }
