@@ -77,8 +77,11 @@ export default function Home() {
         targetElement.scrollIntoView({ behavior: 'smooth' });
     }
   };
-  const plugin = useRef(
+  const galleryPlugin = useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
+  const teamPlugin = useRef(
+    Autoplay({ delay: 2500, stopOnInteraction: true })
   );
 
   return (
@@ -233,9 +236,9 @@ export default function Home() {
           <div className="sm:hidden my-16">
             <Carousel 
               className="w-full max-w-xs mx-auto"
-              plugins={[plugin.current]}
-              onMouseEnter={plugin.current.stop}
-              onMouseLeave={plugin.current.reset}
+              plugins={[galleryPlugin.current]}
+              onMouseEnter={galleryPlugin.current.stop}
+              onMouseLeave={galleryPlugin.current.reset}
             >
               <CarouselContent>
                 {galleryImages.map((image) => (
@@ -303,9 +306,9 @@ export default function Home() {
           <div className="sm:hidden my-16">
             <Carousel 
               className="w-full max-w-xs mx-auto"
-              plugins={[plugin.current]}
-              onMouseEnter={plugin.current.stop}
-              onMouseLeave={plugin.current.reset}
+              plugins={[teamPlugin.current]}
+              onMouseEnter={teamPlugin.current.stop}
+              onMouseLeave={teamPlugin.current.reset}
             >
               <CarouselContent>
                 {teamMembers.map((member) => {
