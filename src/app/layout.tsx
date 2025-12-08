@@ -1,9 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { cn } from '@/lib/utils';
-import { Header } from '@/components/layout/header';
-import { Footer } from '@/components/layout/footer';
-import { Toaster } from '@/components/ui/toaster';
+import { LayoutShell } from '@/components/layout/layout-shell';
 
 export const metadata: Metadata = {
   title: 'ATFR - Asociația Tinerilor Fotbaliști din România',
@@ -22,11 +19,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
-      <body className={cn('min-h-screen bg-background font-body antialiased flex flex-col')}>
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <Toaster />
+      <body>
+        <LayoutShell>{children}</LayoutShell>
       </body>
     </html>
   );
