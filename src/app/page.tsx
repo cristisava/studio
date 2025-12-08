@@ -272,7 +272,8 @@ export default function Home() {
               Profesioniști dedicați care contribuie la succesul tinerilor noștri sportivi.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 my-16">
+          {/* Grid for desktop */}
+          <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 my-16">
             {teamMembers.map((member) => {
               const image = PlaceHolderImages.find(img => img.id === member.imageId);
               return (
@@ -297,6 +298,46 @@ export default function Home() {
                 </Card>
               );
             })}
+          </div>
+          {/* Carousel for mobile */}
+          <div className="sm:hidden my-16">
+            <Carousel 
+              className="w-full max-w-xs mx-auto"
+              plugins={[plugin.current]}
+              onMouseEnter={plugin.current.stop}
+              onMouseLeave={plugin.current.reset}
+            >
+              <CarouselContent>
+                {teamMembers.map((member) => {
+                  const image = PlaceHolderImages.find(img => img.id === member.imageId);
+                  return (
+                    <CarouselItem key={member.id}>
+                      <Card className="text-center overflow-hidden group shadow-md">
+                        <CardContent className="p-0">
+                          {image && (
+                            <div className="relative aspect-square w-full">
+                              <Image
+                                src={image.imageUrl}
+                                alt={member.name}
+                                data-ai-hint={image.imageHint}
+                                fill
+                                className="object-cover"
+                              />
+                            </div>
+                          )}
+                        </CardContent>
+                        <CardHeader>
+                          <CardTitle>{member.name}</CardTitle>
+                          <CardDescription>{member.role}</CardDescription>
+                        </CardHeader>
+                      </Card>
+                    </CarouselItem>
+                  );
+                })}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
       </section>
